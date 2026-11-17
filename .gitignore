@@ -1,0 +1,47 @@
+# ── Python ──────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# 패키징 / 빌드
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# 가상환경
+.venv/
+venv/
+env/
+ENV/
+
+# 테스트 / 커버리지 / 타입체커
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.tox/
+
+# 환경 변수 파일
+.env
+.env.*
+
+# ── Gradio ──────────────────────────────────────────
+.gradio/
+flagged/
+
+# ── 에셋 ───────────────────────────────────────────
+# ComfyUI 생성 후보 (확정본은 assets/characters/, assets/backgrounds/ 에 있음)
+assets/_candidates/
+
+# ── 에디터 / OS ─────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini

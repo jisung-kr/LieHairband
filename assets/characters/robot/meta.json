@@ -1,0 +1,49 @@
+{
+  "id": "robot",
+  "name": "로봇",
+  "workflow": "tools/workflows/char_t2i.json",
+  "model": "z_image_turbo_int8_convrot.safetensors",
+  "size": [
+    832,
+    1216
+  ],
+  "seed": 10001,
+  "batch_size": 4,
+  "batch_index": 3,
+  "prompt": "anime cel shading, clean lineart, soft warm lighting, visual novel character sprite, original character design. A cute small friendly robot sitting and facing the camera directly, front view, symmetrical, waist-up framing. Round head with a smooth glossy cream-white shell and a large rounded black glass display screen as its face, the face screen is completely blank and dark with no eyes and no mouth drawn. One short antenna with a small round tip on top of the head, small round ear discs on both sides of the head. A deep burgundy red cloth headband tied horizontally around its head above the face screen, with a blank plain white rectangular card tucked into the front center of the headband, landscape orientation, completely empty with no writing. A visible slim mechanical neck joint with segmented rings between head and body. Rounded compact body with cream-white shell and dark olive-green panels, small round shoulder joints, short arms relaxed at its sides, hands out of frame. Plain flat solid light gray background, no props, no text, centered, full head visible with margin above the antenna",
+  "source": "assets/_candidates/v2_robot/19ad8f0b_003.png",
+  "screen_seed": [
+    420,
+    640
+  ],
+  "headband_card": {
+    "cx": 420,
+    "cy": 392,
+    "w": 300,
+    "printed": true
+  },
+  "antenna_tip": {
+    "cx": 414,
+    "cy": 174,
+    "r": 21
+  },
+  "stage": {
+    "height": 546,
+    "top": 72,
+    "on_table": true,
+    "shadow": {
+      "cx": 672,
+      "cy": 606,
+      "w": 300,
+      "h": 30
+    }
+  },
+  "face_map": {
+    "ask": "thinking",
+    "gotcha": "correct",
+    "smug": "correct",
+    "win": "correct",
+    "oops": "wrong",
+    "lose": "wrong"
+  }
+}

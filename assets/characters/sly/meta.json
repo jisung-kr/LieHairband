@@ -1,0 +1,31 @@
+{
+  "id": "sly",
+  "type": "능글맞은 타입",
+  "workflow": "tools/workflows/char_t2i.json",
+  "model": "z_image_turbo_int8_convrot.safetensors",
+  "size": [
+    832,
+    1216
+  ],
+  "seed": 3001,
+  "batch_size": 4,
+  "batch_index": 1,
+  "prompt": "anime cel shading, clean lineart, soft warm lighting, visual novel character sprite, original character. Waist-up portrait of a young adult woman sitting and facing the camera directly, front view, symmetrical pose, looking straight into the viewer's eyes. Sly, teasing personality: a confident playful smirk with one corner of the mouth raised, slightly narrowed mischievous golden eyes, a small visible fang. Messy shoulder-length lavender-silver hair with a side-swept fringe, a small black hairpin. Wearing an oversized dark olive-green hoodie over a white collared shirt, sleeves slightly too long. Arms relaxed at her sides, hands out of frame. Plain flat solid light gray background, no shadows on background, no props, no text, full head and both shoulders fully visible, centered with margin above the head",
+  "base_source": "assets/_candidates/char/5f3443f4_001.png",
+  "headband_inpaint": {
+    "workflow": "tools/workflows/inpaint.json",
+    "mask": "assets/_candidates/char/headband_mask.png",
+    "seed": 4101,
+    "batch_size": 4,
+    "batch_index": 3,
+    "denoise": 1.0
+  },
+  "source": "assets/_candidates/band/a0049600_003.png",
+  "mask": "assets/_candidates/mask/0995b9ba_000.png",
+  "out_dir": "assets/characters/sly",
+  "headband_card": {
+    "cx": 416,
+    "cy": 174,
+    "w": 230
+  }
+}

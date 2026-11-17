@@ -1,0 +1,182 @@
+﻿{
+    "ask":  {
+                "base":  "assets/_candidates/band/a0049600_003.png",
+                "workflow":  "tools/workflows/inpaint.json",
+                "prompt":  "anime cel shading, clean lineart, visual novel character sprite, same character, same art style. A young woman with messy lavender-silver hair, golden eyes, wearing a thick red headband, front view facing the viewer. Facial expression: thinking expression, eyes looking upward to the side, lips slightly pursed, curious",
+                "mask":  [
+                             {
+                                 "shape":  "rect",
+                                 "box":  [
+                                             288,
+                                             288,
+                                             545,
+                                             440
+                                         ]
+                             }
+                         ],
+                "seed":  5001,
+                "batch_size":  4,
+                "batch_index":  2,
+                "denoise":  1.0
+            },
+    "suspicious":  {
+                       "base":  "assets/_candidates/band/a0049600_003.png",
+                       "workflow":  "tools/workflows/inpaint.json",
+                       "prompt":  "anime cel shading, clean lineart, visual novel character sprite, same character, same art style. A young woman with messy lavender-silver hair, golden eyes, wearing a thick red headband, front view facing the viewer. Facial expression: suspicious skeptical expression, narrowed half-lidded eyes staring at the viewer, slight doubtful frown, one eyebrow raised",
+                       "mask":  [
+                                    {
+                                        "shape":  "rect",
+                                        "box":  [
+                                                    288,
+                                                    288,
+                                                    545,
+                                                    440
+                                                ]
+                                    }
+                                ],
+                       "seed":  5001,
+                       "batch_size":  4,
+                       "batch_index":  3,
+                       "denoise":  1.0
+                   },
+    "accuse":  {
+                   "base":  "assets/_candidates/band/a0049600_003.png",
+                   "workflow":  "tools/workflows/inpaint.json",
+                   "prompt":  "anime cel shading, clean lineart, visual novel character sprite, same character, same art style. A young woman with messy lavender-silver hair, golden eyes, wearing a thick red headband, front view facing the viewer. Facial expression: accusing expression, sharp wide eyes, eyebrows angled down, mouth open shouting",
+                   "mask":  [
+                                {
+                                    "shape":  "rect",
+                                    "box":  [
+                                                288,
+                                                288,
+                                                545,
+                                                440
+                                            ]
+                                }
+                            ],
+                   "seed":  5001,
+                   "batch_size":  4,
+                   "batch_index":  1,
+                   "denoise":  1.0
+               },
+    "caught":  {
+                   "base":  "assets/_candidates/band/a0049600_003.png",
+                   "workflow":  "tools/workflows/inpaint.json",
+                   "prompt":  "anime cel shading, clean lineart, visual novel character sprite, same character, same art style. A young woman with messy lavender-silver hair, golden eyes, wearing a thick red headband, front view facing the viewer. Facial expression: flustered caught-off-guard expression, wide startled eyes, heavy blush, wavy nervous mouth",
+                   "mask":  [
+                                {
+                                    "shape":  "rect",
+                                    "box":  [
+                                                288,
+                                                288,
+                                                545,
+                                                440
+                                            ]
+                                }
+                            ],
+                   "seed":  5001,
+                   "batch_size":  4,
+                   "batch_index":  0,
+                   "denoise":  1.0
+               },
+    "smug":  {
+                 "base":  "assets/_candidates/band/a0049600_003.png",
+                 "workflow":  "tools/workflows/inpaint.json",
+                 "prompt":  "anime cel shading, clean lineart, visual novel character sprite, same character, same art style. A young woman with messy lavender-silver hair, golden eyes, wearing a thick red headband, front view facing the viewer. Facial expression: very smug teasing expression, half-closed eyes, wide confident grin showing a small fang",
+                 "mask":  [
+                              {
+                                  "shape":  "rect",
+                                  "box":  [
+                                              288,
+                                              288,
+                                              545,
+                                              440
+                                          ]
+                              }
+                          ],
+                 "seed":  5001,
+                 "batch_size":  4,
+                 "batch_index":  3,
+                 "denoise":  1.0
+             },
+    "gotcha":  {
+                   "base":  "assets/_candidates/band/a0049600_003.png",
+                   "workflow":  "tools/workflows/inpaint.json",
+                   "prompt":  "anime cel shading, clean lineart, visual novel character sprite, same character, same art style. A young woman with messy lavender-silver hair, golden eyes, wearing a thick red headband, front view facing the viewer. Facial expression: triumphant excited expression, sparkling eyes, big open-mouth grin with a small fang",
+                   "mask":  [
+                                {
+                                    "shape":  "rect",
+                                    "box":  [
+                                                288,
+                                                288,
+                                                545,
+                                                440
+                                            ]
+                                }
+                            ],
+                   "seed":  5001,
+                   "batch_size":  4,
+                   "batch_index":  3,
+                   "denoise":  1.0
+               },
+    "oops":  {
+                 "base":  "assets/_candidates/band/a0049600_003.png",
+                 "workflow":  "tools/workflows/inpaint.json",
+                 "prompt":  "anime cel shading, clean lineart, visual novel character sprite, same character, same art style. A young woman with messy lavender-silver hair, golden eyes, wearing a thick red headband, front view facing the viewer. Facial expression: awkward apologetic expression, eyebrows lowered, sheepish crooked smile, eyes looking away",
+                 "mask":  [
+                              {
+                                  "shape":  "rect",
+                                  "box":  [
+                                              288,
+                                              288,
+                                              545,
+                                              440
+                                          ]
+                              }
+                          ],
+                 "seed":  5001,
+                 "batch_size":  4,
+                 "batch_index":  3,
+                 "denoise":  1.0
+             },
+    "win":  {
+                "base":  "assets/_candidates/band/a0049600_003.png",
+                "workflow":  "tools/workflows/inpaint.json",
+                "prompt":  "anime cel shading, clean lineart, visual novel character sprite, same character, same art style. A young woman with messy lavender-silver hair, golden eyes, wearing a thick red headband, front view facing the viewer. Facial expression: joyful laughing expression, eyes happily closed in upward arcs, wide open smile",
+                "mask":  [
+                             {
+                                 "shape":  "rect",
+                                 "box":  [
+                                             288,
+                                             288,
+                                             545,
+                                             440
+                                         ]
+                             }
+                         ],
+                "seed":  5001,
+                "batch_size":  4,
+                "batch_index":  2,
+                "denoise":  1.0
+            },
+    "lose":  {
+                 "base":  "assets/_candidates/band/a0049600_003.png",
+                 "workflow":  "tools/workflows/inpaint.json",
+                 "prompt":  "anime cel shading, clean lineart, visual novel character sprite, same character, same art style. A young woman with messy lavender-silver hair, golden eyes, wearing a thick red headband, front view facing the viewer. Facial expression: sad defeated expression, teary eyes, pouting trembling mouth, eyebrows drooping",
+                 "mask":  [
+                              {
+                                  "shape":  "rect",
+                                  "box":  [
+                                              288,
+                                              288,
+                                              545,
+                                              440
+                                          ]
+                              }
+                          ],
+                 "seed":  5001,
+                 "batch_size":  4,
+                 "batch_index":  1,
+                 "denoise":  1.0
+             }
+}

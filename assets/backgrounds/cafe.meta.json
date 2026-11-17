@@ -1,0 +1,42 @@
+{
+  "name": "cafe",
+  "workflow": "tools/workflows/bg_t2i.json",
+  "model": "z_image_turbo_int8_convrot.safetensors",
+  "size": [
+    1344,
+    768
+  ],
+  "seed": 2001,
+  "batch_size": 4,
+  "batch_index": 2,
+  "prompt": "anime cel shading, clean lineart, soft warm lighting, visual novel style background art. Point-of-view shot from a person seated at a cafe table. The wooden tabletop is very close to the camera and fills the entire bottom quarter of the image edge to edge, with a coffee cup on the near right of the table. Directly across the table, in the exact center of the image, one single empty upholstered armchair faces the camera. No other chairs in the foreground, no people. Behind the armchair: cozy cafe interior, warm pendant lamps, wooden shelves with plants and coffee jars, window with soft afternoon light, gentle background blur. Eye-level camera, symmetrical, vibrant warm colors",
+  "source": "assets/_candidates/bg/85866271_002.png",
+  "out": "assets/backgrounds/cafe.png",
+  "fg_out": "assets/backgrounds/cafe_table_fg.png",
+  "table_polygon": [
+    [
+      0,
+      695
+    ],
+    [
+      272,
+      536
+    ],
+    [
+      1152,
+      536
+    ],
+    [
+      1344,
+      626
+    ],
+    [
+      1344,
+      768
+    ],
+    [
+      0,
+      768
+    ]
+  ]
+}

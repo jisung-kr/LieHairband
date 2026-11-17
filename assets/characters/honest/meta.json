@@ -1,0 +1,130 @@
+{
+  "id": "honest",
+  "name": "도하",
+  "type": "정직한 타입",
+  "tell": "귀 움찔 + 귀 끝 붉어짐",
+  "size": [
+    832,
+    1216
+  ],
+  "model": "animagine-xl-4.0-opt.safetensors",
+  "base": {
+    "workflow": "tools/workflows/sdxl_t2i.json (tools/doha_prompt.py, v2 프롬프트)",
+    "seed": 9401,
+    "batch_index": 3,
+    "candidate": "assets/_candidates/doha/7689d317_003.png"
+  },
+  "outpaint": [
+    {
+      "script": "tools/doha_outpaint.py",
+      "layout": "bottom",
+      "scale": 0.82,
+      "seed": 9601,
+      "batch_index": 0,
+      "result": "assets/_candidates/doha/outpaint/v2n4_out_0.png",
+      "why": "Animagine 이 머리 위를 잘라서, 줄여서 아래에 놓고 위·양옆만 다시 그림 (후보 A)"
+    },
+    {
+      "script": "tools/doha_outpaint.py --layout=top",
+      "scale": 0.58,
+      "seed": 9601,
+      "batch_index": 1,
+      "result": "assets/_candidates/doha/outpaint/A2_out_1.png",
+      "why": "A 는 얼굴이 너무 커서, 줄여서 위에 놓고 몸통·어깨를 그림 (얼굴 크기를 임시 캐릭터와 맞춤)"
+    }
+  ],
+  "mask": "assets/_candidates/doha/mask/efd39c56_000.png",
+  "out_dir": "assets/characters/honest",
+  "headband_card": {
+    "cx": 428,
+    "cy": 255,
+    "w": 150
+  },
+  "headband_card_measured": {
+    "cx": 439,
+    "cy": 229,
+    "w": 117
+  },
+  "headband_bbox": [
+    337,
+    218,
+    542,
+    240
+  ],
+  "expressions": {
+    "correct": {
+      "file": "correct.png",
+      "workflow": "tools/workflows/doha_inpaint_correct.json (tools/doha_inpaint.py)",
+      "seed": 9700,
+      "denoise": 0.7,
+      "tags": "happy, joyful, big smile, open mouth, :d, bright eyes, raised eyebrows",
+      "candidate": "assets\\_candidates\\doha\\expr\\correct_0.png"
+    },
+    "wrong": {
+      "file": "wrong.png",
+      "workflow": "tools/workflows/doha_inpaint_wrong.json (tools/doha_inpaint.py)",
+      "seed": 9700,
+      "denoise": 0.7,
+      "tags": "disappointed, frustrated, frown, furrowed brow, pout, closed mouth, troubled eyebrows",
+      "candidate": "assets\\_candidates\\doha\\expr\\wrong_0.png"
+    },
+    "caught": {
+      "file": "caught.png",
+      "workflow": "tools/workflows/doha_inpaint_caught.json (tools/doha_inpaint.py)",
+      "seed": 9700,
+      "denoise": 0.72,
+      "tags": "flustered, surprised, wide eyes, embarrassed, blush, sweatdrop, open mouth, nervous smile",
+      "candidate": "assets\\_candidates\\doha\\expr\\caught_2.png"
+    },
+    "talk": {
+      "file": "part_talk.png",
+      "workflow": "tools/workflows/doha_inpaint_talk.json (tools/doha_inpaint.py)",
+      "seed": 9700,
+      "denoise": 0.65,
+      "tags": "talking, open mouth, gentle expression, calm eyes",
+      "candidate": "assets\\_candidates\\doha\\expr\\talk_1.png"
+    },
+    "tell": {
+      "file": "part_tell.png",
+      "workflow": "tools/workflows/doha_inpaint_tell.json (tools/doha_inpaint.py)",
+      "seed": 9700,
+      "denoise": 0.55,
+      "tags": "red ears, blushing ears, ear blush, embarrassed, gentle smile, closed mouth",
+      "candidate": "assets\\_candidates\\doha\\expr\\tell_3.png"
+    }
+  },
+  "stage": {
+    "height": 900,
+    "top": -25,
+    "on_table": false
+  },
+  "tell_fx": "twitch",
+  "tell_origin": {
+    "cx": 428,
+    "cy": 385
+  },
+  "face_map": {
+    "ask": "idle",
+    "suspicious": "idle",
+    "accuse": "idle",
+    "gotcha": "correct",
+    "smug": "correct",
+    "win": "correct",
+    "oops": "wrong",
+    "lose": "wrong"
+  },
+  "lines": {
+    "opening": "잘 부탁해! 먼저 물어봐도 돼.",
+    "game_over": {
+      "player": "아, 졌다... 너 진짜 잘한다.",
+      "ai": "앗, 내가 맞혔다! 재밌었어.",
+      "draw": "무승부네. 다음엔 꼭 맞혀 볼게."
+    },
+    "challenge": {
+      "player_ok": "으, 미안... 사실 거짓말이었어.",
+      "player_fail": "아니야, 진짜야! 믿어 줘.",
+      "ai_ok": "역시... 그거 거짓말이었지?",
+      "ai_fail": "어, 진짜였구나. 의심해서 미안해."
+    }
+  }
+}

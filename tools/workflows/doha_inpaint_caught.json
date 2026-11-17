@@ -1,0 +1,127 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "doha_base_A2.png"
+    }
+  },
+  "2": {
+    "class_type": "LoadImageMask",
+    "inputs": {
+      "image": "doha_mask_caught.png",
+      "channel": "red"
+    }
+  },
+  "3": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "animagine-xl-4.0-opt.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "1boy, solo, male focus, bishounen, handsome, young adult, upper body, facing viewer, straight-on, looking at viewer, almond eyes, long eyelashes, brown eyes, sharp jawline, very short hair, undercut, brown hair, both ears visible, human ears, red headband, white collared shirt, navy blue cardigan, simple background, anime coloring, clean lineart, flustered, surprised, wide eyes, embarrassed, blush, sweatdrop, open mouth, nervous smile, masterpiece, high score, great score, absurdres",
+      "clip": [
+        "3",
+        1
+      ]
+    }
+  },
+  "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, low score, bad score, average score, signature, watermark, username, blurry, long hair, medium hair, sidelocks, hair over ears, covered ears, hair covering ears, thin headband, tilted headband, diagonal headband, hairband, cropped head, head out of frame, close-up, portrait, animal ears, kemonomimi, dog ears, fox ears, orange headband, hat, cap, hood, headphones, earrings, glasses, head tilt, looking away, profile, hands, multiple boys, female, breasts",
+      "clip": [
+        "3",
+        1
+      ]
+    }
+  },
+  "6": {
+    "class_type": "VAEEncode",
+    "inputs": {
+      "pixels": [
+        "1",
+        0
+      ],
+      "vae": [
+        "3",
+        2
+      ]
+    }
+  },
+  "7": {
+    "class_type": "SetLatentNoiseMask",
+    "inputs": {
+      "samples": [
+        "6",
+        0
+      ],
+      "mask": [
+        "2",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "RepeatLatentBatch",
+    "inputs": {
+      "samples": [
+        "7",
+        0
+      ],
+      "amount": 4
+    }
+  },
+  "9": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 9700,
+      "steps": 28,
+      "cfg": 5.0,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
+      "denoise": 0.72,
+      "model": [
+        "3",
+        0
+      ],
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "8",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "9",
+        0
+      ],
+      "vae": [
+        "3",
+        2
+      ]
+    }
+  },
+  "11": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "doha/expr_caught",
+      "images": [
+        "10",
+        0
+      ]
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "idle": {
+    "base": "assets/_candidates/v2_robot/19ad8f0b_003.png",
+    "workflow": "tools/workflows/inpaint.json",
+    "mask": "assets/_candidates/robot_expr/inpaint_mask.png",
+    "prompt": "anime cel shading, clean lineart, soft warm lighting, visual novel character sprite, same character, same art style. A cute small round robot with a glossy cream-white shell head and a large black glass display screen face. The dark display screen shows a simple cute face made of softly glowing warm amber LED light: two calm rounded oval eyes, relaxed and friendly, no mouth",
+    "seed": 21001,
+    "batch_size": 4,
+    "batch_index": 1,
+    "denoise": 1.0,
+    "alpha": "assets/_candidates/mask/c877ac08_000.png"
+  },
+  "correct": {
+    "base": "assets/_candidates/v2_robot/19ad8f0b_003.png",
+    "workflow": "tools/workflows/inpaint.json",
+    "mask": "assets/_candidates/robot_expr/inpaint_mask.png",
+    "prompt": "anime cel shading, clean lineart, soft warm lighting, visual novel character sprite, same character, same art style. A cute small round robot with a glossy cream-white shell head and a large black glass display screen face. The dark display screen shows a simple cute face made of softly glowing warm amber LED light: two happy upward arc eyes like ^ ^ and a wide joyful smile, glad and relieved",
+    "seed": 21001,
+    "batch_size": 4,
+    "batch_index": 1,
+    "denoise": 1.0,
+    "alpha": "assets/_candidates/mask/c877ac08_000.png"
+  },
+  "wrong": {
+    "base": "assets/_candidates/v2_robot/19ad8f0b_003.png",
+    "workflow": "tools/workflows/inpaint.json",
+    "mask": "assets/_candidates/robot_expr/inpaint_mask.png",
+    "prompt": "anime cel shading, clean lineart, soft warm lighting, visual novel character sprite, same character, same art style. A cute small round robot with a glossy cream-white shell head and a large black glass display screen face. The dark display screen shows a simple cute face made of softly glowing warm amber LED light: two sad droopy eyes with small tear drops and a downturned frustrated wavy mouth",
+    "seed": 21001,
+    "batch_size": 4,
+    "batch_index": 1,
+    "denoise": 1.0,
+    "alpha": "assets/_candidates/mask/c877ac08_000.png"
+  },
+  "caught": {
+    "base": "assets/_candidates/v2_robot/19ad8f0b_003.png",
+    "workflow": "tools/workflows/inpaint.json",
+    "mask": "assets/_candidates/robot_expr/inpaint_mask.png",
+    "prompt": "anime cel shading, clean lineart, soft warm lighting, visual novel character sprite, same character, same art style. A cute small round robot with a glossy cream-white shell head and a large black glass display screen face. The dark display screen shows a simple cute face made of softly glowing warm amber LED light: two wide round startled eyes, a wavy nervous line mouth, small blush marks on the screen",
+    "seed": 21001,
+    "batch_size": 4,
+    "batch_index": 1,
+    "denoise": 1.0,
+    "alpha": "assets/_candidates/mask/c877ac08_000.png"
+  },
+  "suspicious": {
+    "base": "assets/_candidates/v2_robot/19ad8f0b_003.png",
+    "workflow": "tools/workflows/inpaint.json",
+    "mask": "assets/_candidates/robot_expr/inpaint_mask.png",
+    "prompt": "anime cel shading, clean lineart, soft warm lighting, visual novel character sprite, same character, same art style. A cute small round robot with a glossy cream-white shell head and a large black glass display screen face. The dark display screen shows a simple cute face made of softly glowing warm amber LED light: two flat narrow half-closed line eyes, skeptical squint, a small flat line mouth",
+    "seed": 21001,
+    "batch_size": 4,
+    "batch_index": 3,
+    "denoise": 1.0,
+    "alpha": "assets/_candidates/mask/c877ac08_000.png"
+  },
+  "accuse": {
+    "base": "assets/_candidates/v2_robot/19ad8f0b_003.png",
+    "workflow": "tools/workflows/inpaint.json",
+    "mask": "assets/_candidates/robot_expr/inpaint_mask.png",
+    "prompt": "anime cel shading, clean lineart, soft warm lighting, visual novel character sprite, same character, same art style. A cute small round robot with a glossy cream-white shell head and a large black glass display screen face. The dark display screen shows a simple cute face made of softly glowing warm amber LED light: two sharp angry slanted eyes pointing inward, and a small exclamation mark",
+    "seed": 21001,
+    "batch_size": 4,
+    "batch_index": 3,
+    "denoise": 1.0,
+    "alpha": "assets/_candidates/mask/c877ac08_000.png"
+  },
+  "thinking": {
+    "base": "assets/_candidates/v2_robot/19ad8f0b_003.png",
+    "workflow": "tools/workflows/inpaint.json",
+    "mask": "assets/_candidates/robot_expr/inpaint_mask.png",
+    "prompt": "anime cel shading, clean lineart, soft warm lighting, visual novel character sprite, same character, same art style. A cute small round robot with a glossy cream-white shell head and a large black glass display screen face. The dark display screen shows a simple cute face made of softly glowing warm amber LED light: two calm rounded oval eyes with the glowing pupils shifted up toward the upper right corner, looking upward while pondering, a small flat line mouth, and three small glowing dots floating near the top right",
+    "seed": 21001,
+    "batch_size": 4,
+    "batch_index": 1,
+    "denoise": 1.0,
+    "alpha": "assets/_candidates/mask/c877ac08_000.png"
+  },
+  "part_talk": {
+    "base": "assets/_candidates/robot_expr/idle/1.png",
+    "mask": {
+      "shape": "ellipse",
+      "box": [
+        330,
+        622,
+        506,
+        716
+      ]
+    },
+    "prompt": "anime cel shading, clean lineart, soft warm lighting, visual novel character sprite, same character, same art style. A cute small round robot with a glossy cream-white shell head and a large black glass display screen face. The dark display screen shows a simple cute face made of softly glowing warm amber LED light: exactly the same two calm glowing oval eyes, and a small open rounded glowing mouth as if talking, same warm amber LED glow",
+    "seed": 21001,
+    "batch_size": 4,
+    "batch_index": 0,
+    "alpha": "마스크 × 실루엣"
+  },
+  "part_tell": {
+    "base": "assets/_candidates/robot_expr/idle/1.png",
+    "mask": {
+      "shape": "ellipse",
+      "box": [
+        334,
+        96,
+        494,
+        254
+      ]
+    },
+    "prompt": "anime cel shading, clean lineart, soft warm lighting, visual novel character sprite, same character, same art style. A cute small round robot with a glossy cream-white shell head and a large black glass display screen face. The dark display screen shows a simple cute face made of softly glowing warm amber LED light: the same small antenna with a round ball tip, with a few tiny bright yellow-white electric sparks crackling around the antenna tip, small zigzag lightning sparks, a circuit glitch, plain flat light gray background around it",
+    "seed": 21001,
+    "batch_size": 4,
+    "batch_index": 0,
+    "alpha": "원본과 달라진 픽셀"
+  }
+}

@@ -1,0 +1,152 @@
+{
+ "1": {
+  "class_type": "UNETLoader",
+  "inputs": {
+   "unet_name": "z_image_turbo_int8_convrot.safetensors",
+   "weight_dtype": "default"
+  }
+ },
+ "2": {
+  "class_type": "CLIPLoader",
+  "inputs": {
+   "clip_name": "qwen_3_4b_fp8_mixed.safetensors",
+   "type": "lumina2",
+   "device": "default"
+  }
+ },
+ "3": {
+  "class_type": "VAELoader",
+  "inputs": {
+   "vae_name": "ae.safetensors"
+  }
+ },
+ "4": {
+  "class_type": "ModelSamplingAuraFlow",
+  "inputs": {
+   "model": [
+    "1",
+    0
+   ],
+   "shift": 3
+  }
+ },
+ "5": {
+  "class_type": "CLIPTextEncode",
+  "inputs": {
+   "clip": [
+    "2",
+    0
+   ],
+   "text": "anime cel shading, clean lineart, visual novel character sprite. A young woman with lavender-silver hair wearing a thick deep red elastic headband wrapped straight horizontally around her head across the middle of her forehead, pressing her bangs down, the red band clearly visible from the left edge of her head to the right edge. A large blank white card, wide landscape rectangle, is tucked under the red headband at the center of her forehead, the card is completely empty with no text, no symbols, flat, facing the viewer, slightly overlapping the bangs. Same art style"
+  }
+ },
+ "6": {
+  "class_type": "ConditioningZeroOut",
+  "inputs": {
+   "conditioning": [
+    "5",
+    0
+   ]
+  }
+ },
+ "7": {
+  "class_type": "LoadImage",
+  "inputs": {
+   "image": "5f3443f4_001.png"
+  }
+ },
+ "8": {
+  "class_type": "LoadImageMask",
+  "inputs": {
+   "image": "headband_mask.png",
+   "channel": "red"
+  }
+ },
+ "9": {
+  "class_type": "VAEEncode",
+  "inputs": {
+   "pixels": [
+    "7",
+    0
+   ],
+   "vae": [
+    "3",
+    0
+   ]
+  }
+ },
+ "10": {
+  "class_type": "SetLatentNoiseMask",
+  "inputs": {
+   "samples": [
+    "9",
+    0
+   ],
+   "mask": [
+    "8",
+    0
+   ]
+  }
+ },
+ "15": {
+  "class_type": "RepeatLatentBatch",
+  "inputs": {
+   "samples": [
+    "10",
+    0
+   ],
+   "amount": 4
+  }
+ },
+ "11": {
+  "class_type": "KSampler",
+  "inputs": {
+   "model": [
+    "4",
+    0
+   ],
+   "positive": [
+    "5",
+    0
+   ],
+   "negative": [
+    "6",
+    0
+   ],
+   "latent_image": [
+    "15",
+    0
+   ],
+   "seed": 4101,
+   "control_after_generate": "fixed",
+   "steps": 8,
+   "cfg": 1,
+   "sampler_name": "res_multistep",
+   "scheduler": "simple",
+   "denoise": 1.0
+  }
+ },
+ "12": {
+  "class_type": "VAEDecode",
+  "inputs": {
+   "samples": [
+    "11",
+    0
+   ],
+   "vae": [
+    "3",
+    0
+   ]
+  }
+ },
+ "14": {
+  "class_type": "SaveImage",
+  "inputs": {
+   "images": [
+    "12",
+    0
+   ],
+   "filename_prefix": "headband/char_band"
+  }
+ }
+}
